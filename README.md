@@ -4,21 +4,22 @@ Wazuh MCP Server python script  that can be ran locally for LM Studio integratio
 ---
 
 1. Download 'wazuh_mcp_server.py' to a local directory.
+
 2. Create a local python venv to isolate packages and install dependencies:
 
-'''
+```python
 python -m venv .venv
 source .venv/bin/activate
 
 pip install mcp requests
 deactivate
-'''
+```
 
 3. Configure LM Studio's mcp.json with the following variables:
 
 > This is typically located at ~/.lmstudio/mcp.json or can be accessed by opening the right-hand side panel and clicking '+ Install' under Integrations.
 
-'''
+```python
 {
     "wazuh-mcp": {
       "command": "/path/to/.venv/bin/python3",
@@ -40,5 +41,5 @@ deactivate
     }
   }
 }
-'''
+```
 
